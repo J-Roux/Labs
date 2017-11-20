@@ -5,9 +5,9 @@ import scipy.stats
 from numpy import genfromtxt
 
 
-N = 100
-mean = [0, -1]
-cov = [[1, -0.5], [-0.5, 2]]
+N = 10000
+mean = [1, -1]
+cov = [[1, -0.1], [-0.1, 2]]
 
 
 def perform(x, y):
@@ -21,7 +21,7 @@ def perform(x, y):
 
 if __name__ == '__main__':
     x, y = np.random.multivariate_normal(mean, cov, N).T
-    print 'Real correlation %f' % (-0.5 / 2.0 ** 0.5)
+    print 'Real correlation %f' % (-0.1 / 2.0 ** 0.5)
     perform(x, y)
     wine = genfromtxt('wine.txt', delimiter=',')
     x = wine[:,2]

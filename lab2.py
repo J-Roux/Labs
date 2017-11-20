@@ -4,10 +4,10 @@ import scipy.stats
 from numpy import genfromtxt
 
 
-N = 100
-a = -0.5
-b = 2
-sigma = 0.01
+N = 10000
+a = -10
+b = -0.1
+sigma = 1
 
 
 def regression(x, y):
